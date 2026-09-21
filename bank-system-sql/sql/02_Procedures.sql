@@ -317,10 +317,7 @@ BEGIN
         END;
 
         -- ⑤ 检查初始余额
-        IF @InitialBalance < 0
-        BEGIN
-            RAISERROR(N'初始余额不能小于0', 16, 1);
-        END;
+        
 
         -- ⑥ 创建账户
         INSERT INTO Account
